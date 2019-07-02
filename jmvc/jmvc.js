@@ -1,0 +1,19 @@
+steal(
+  'jquery/class',
+  'jquery/controller',
+  'jquery/dom/form_params',
+  'jquery/dom/route',
+  'jquery/dom/cookie',
+  'jquery/lang/object',
+  'jquery/lang/json',
+  'jquery/lang/string',
+  'jquery/model',
+  'jquery/model/backup'
+).then(
+  'jquery/model/list'
+).then(
+  'jquery/model/validations',
+  'jquery/view',
+  'jquery/view/ejs',
+  'jquery/view/helpers'
+);
