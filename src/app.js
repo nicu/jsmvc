@@ -1,1 +1,1 @@
-steal('//src/models/todo.js');
+steal('jmvc').then('//src/models/todo.js');

@@ -4,7 +4,16 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const todos = [];
+const todos = [
+  {
+    id: 1,
+    text: 'Music is nice',
+  },
+  {
+    id: 2,
+    text: 'Look ma, no hands!',
+  },
+];
 let index = 0;
 
 const findTodoIndex = id => todos.findIndex(todo => todo.id === id);
