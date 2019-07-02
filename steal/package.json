@@ -1,0 +1,15 @@
+{
+  "description": "Allegiant Steal.js",
+  "name": "allegiant-steal",
+  "readmeFilename": "README.md",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lolaent/Allegiant-Steal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolaent/Allegiant-Steal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lolaent/Allegiant-Steal/issues"
+  },
+  "main": "steal.js"
+}
