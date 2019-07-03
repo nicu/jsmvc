@@ -84,6 +84,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 createResource('todos');
-createResource('owners');
 
 app.listen(port, () => console.log(`Todos app listening on port ${port}!`));

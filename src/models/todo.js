@@ -1,4 +1,4 @@
-steal(function($) {
+steal('//src/models/owner.js').then(function($) {
   $.Model(
     'Todo',
     {
@@ -11,7 +11,6 @@ steal(function($) {
 
       attributes: {
         text: 'string',
-        date: 'dateTime',
       },
 
       convert: {
@@ -40,7 +39,7 @@ steal(function($) {
       },
 
       init: function() {
-        this.validate(['text', 'date'], function(value) {
+        this.validate(['text'], function(value) {
           if (!(value && $.trim(value).length)) {
             return 'required';
           }
