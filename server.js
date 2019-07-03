@@ -35,7 +35,7 @@ const createResource = name => {
 
   app.get('/' + name + '/:id', (req, res) => {
     const id = parseInt(req.params.id);
-    const index = findIndex(id);
+    const index = findIndex(resources[name], id);
 
     const item = resources[name][index];
 
@@ -48,7 +48,7 @@ const createResource = name => {
 
   app.put('/' + name + '/:id', (req, res) => {
     const id = parseInt(req.params.id);
-    const index = findIndex(id);
+    const index = findIndex(resources[name], id);
 
     if (!resources[name][index]) {
       return res.send('Unknown index');
@@ -64,7 +64,7 @@ const createResource = name => {
 
   app.delete('/' + name + '/:id', (req, res) => {
     const id = parseInt(req.params.id);
-    const index = findIndex(id);
+    const index = findIndex(resources[name], id);
     if (!resources[name][index]) {
       return res.send('Unknown index');
     }
