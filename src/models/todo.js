@@ -38,6 +38,14 @@ steal(function($) {
           return date.getTime() / 1000;
         },
       },
+
+      init: function() {
+        this.validate(['text', 'date'], function(value) {
+          if (!(value && $.trim(value).length)) {
+            return 'required';
+          }
+        });
+      },
     },
     {
       /* prototype */
