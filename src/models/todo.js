@@ -1,4 +1,4 @@
-steal('//src/models/owner.js').then(function($) {
+steal(function($) {
   $.Model(
     'Todo',
     {

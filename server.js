@@ -56,10 +56,10 @@ const createResource = name => {
 
     const item = Object.assign(resources[name][index], req.body);
 
-    resources[name][index] = todo;
+    resources[name][index] = item;
 
     res.set('Content-Type', 'application/json');
-    res.send(req.body.todo);
+    res.send(req.body.item);
   });
 
   app.delete('/' + name + '/:id', (req, res) => {
@@ -84,5 +84,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 createResource('todos');
+resources.todos.push({
+  id: 101,
+  text: 'First',
+});
+resources.todos.push({
+  id: 102,
+  text: 'Second',
+  completed: true,
+});
 
 app.listen(port, () => console.log(`Todos app listening on port ${port}!`));
