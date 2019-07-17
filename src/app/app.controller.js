@@ -31,7 +31,7 @@ steal('jquery/controller/view')
         '.edit change, .edit blur': function(input) {
           var self = this;
           var li = input.parents('li');
-          li.removeClass('editing');
+          // li.removeClass('editing');
           li.model()
             .attr('text', input.val())
             .save()
