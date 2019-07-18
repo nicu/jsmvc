@@ -8,9 +8,16 @@ steal(function($) {
       create: 'POST http://localhost:3000/todos',
       update: 'PUT http://localhost:3000/todos/{id}',
       destroy: 'DELETE http://localhost:3000/todos/{id}',
+
+      attributes: {
+        authors: 'Author.models',
+      },
     },
     {
       /* prototype */
+      isCompleted: function() {
+        return true;
+      },
     }
   );
 });

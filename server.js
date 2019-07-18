@@ -84,6 +84,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 createResource('todos');
+
 resources.todos.push({
   id: 101,
   text: 'First',
