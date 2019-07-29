@@ -1,4 +1,6 @@
 steal('jmvc')
+  .then('//src/models/todo.js')
+  .then('//src/todo-list/todo-list.js')
   .then(function($) {
-    console.log('TODO app');
+    $('#app').todo_list();
   });
